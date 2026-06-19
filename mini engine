@@ -1,0 +1,96 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <filesystem>
+#include <algorithm>
+
+using namespace std;
+namespace fs = filesystem;
+
+struct SearchResult {
+    string fileName;
+    int count;
+};
+
+string toLower(string text) {
+    transform(text.begin(), text.end(), text.begin(), ::tolower);
+    return text;
+}
+
+int countOccurrences(const string& text, const string& keyword) {
+    int count = 0;
+    size_t pos = 0;
+
+    while ((pos = text.find(keyword, pos)) != string::npos) {
+        count++;
+        pos += keyword.length();
+    }
+
+    return count;
+}
+
+vector<SearchResult> searchFiles(const string& folderPath, const string& keyword) {
+    vector<SearchResult> results;
+
+    for (const auto& entry : fs::directory_iterator(folderPath)) {
+
+        if (entry.path().extension() == ".txt") {
+
+            ifstream file(entry.path());
+
+            if (!file.is_open()) {
+                continue;
+            }
+
+            string line, content;
+
+            while (getline(file, line)) {
+                content += toLower(line) + " ";
+            }
+
+            file.close();
+
+            int matches = countOccurrences(content, toLower(keyword));
+
+            if (matches > 0) {
+                results.push_back({entry.path().filename().string(), matches});
+            }
+        }
+    }
+
+    return results;
+}
+
+int main() {
+    string folderPath, keyword;
+
+    cout << "===== TextQuest Search Engine =====\n\n";
+
+    cout << "Enter folder path: ";
+    getline(cin, folderPath);
+
+    cout << "Enter keyword to search: ";
+    getline(cin, keyword);
+
+    try {
+        vector<SearchResult> results = searchFiles(folderPath, keyword);
+
+        if (results.empty()) {
+            cout << "\nNo matches found.\n";
+        } else {
+            cout << "\nSearch Results:\n";
+            cout << "--------------------------\n";
+
+            for (const auto& result : results) {
+                cout << "File: " << result.fileName
+                     << " | Matches: " << result.count << endl;
+            }
+        }
+    }
+    catch (const fs::filesystem_error& e) {
+        cout << "\nInvalid folder path!\n";
+    }
+
+    return 0;
+}
