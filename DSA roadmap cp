@@ -1,0 +1,914 @@
+DSA Roadmap for Competitive Programming
+Topic	Weight	Difficulty	Interview Frequency
+Arrays	⭐⭐⭐⭐⭐	Easy	⭐⭐⭐⭐⭐
+Strings	⭐⭐⭐⭐⭐	Easy-Medium	⭐⭐⭐⭐⭐
+Hashing	⭐⭐⭐⭐⭐	Medium	⭐⭐⭐⭐⭐
+Linked List	⭐⭐⭐	Medium	⭐⭐⭐⭐
+Stack	⭐⭐⭐⭐	Easy	⭐⭐⭐⭐
+Queue	⭐⭐⭐	Easy	⭐⭐⭐
+Trees	⭐⭐⭐⭐⭐	Medium	⭐⭐⭐⭐⭐
+BST	⭐⭐⭐⭐	Medium	⭐⭐⭐⭐
+Heap	⭐⭐⭐⭐	Medium	⭐⭐⭐⭐
+Graph	⭐⭐⭐⭐⭐	Hard	⭐⭐⭐⭐⭐
+Greedy	⭐⭐⭐⭐	Medium	⭐⭐⭐⭐
+Dynamic Programming	⭐⭐⭐⭐⭐	Hard	⭐⭐⭐⭐⭐
+Recursion	⭐⭐⭐⭐	Easy	⭐⭐⭐⭐
+Backtracking	⭐⭐⭐⭐	Medium	⭐⭐⭐⭐
+Trie	⭐⭐⭐	Hard	⭐⭐⭐
+Segment Tree	⭐⭐⭐	Hard	⭐⭐⭐
+Union Find	⭐⭐⭐	Medium	⭐⭐⭐
+1. Arrays (20%)
+What is an Array?
+An array is a collection of elements stored in continuous memory locations.
+Index
+
+0   1   2   3   4
+
+10  20  30  40  50
+Think of it like lockers.
+Locker 0 → 10
+Locker 1 → 20
+Locker 2 → 30
+You can directly access any locker.
+arr[2] = 30
+Time Complexity
+Access → O(1)
+
+Search → O(n)
+
+Insert → O(n)
+
+Delete → O(n)
+
+Concepts
+Prefix Sum
+Sliding Window
+Two Pointers
+Kadane Algorithm
+Binary Search on Arrays
+Sorting
+Matrix
+Difference Array
+Companies Ask
+Maximum Subarray
+Rotate Array
+Merge Intervals
+Product Except Self
+Trapping Rain Water
+2. Strings (20%)
+A string is simply an array of characters.
+HELLO
+
+H
+E
+L
+L
+O
+Topics
+Reverse String
+Palindrome
+Frequency Count
+KMP
+Rabin Karp
+Z Algorithm
+Rolling Hash
+Complexities
+Access O(1)
+
+Traversal O(n)
+
+Common Questions
+
+Longest Palindrome
+Valid Anagram
+Longest Substring
+Minimum Window
+3. Hashing (20%)
+Hashing stores values for instant lookup.
+Key
+
+Apple
+
+↓
+
+Hash Function
+
+↓
+
+Index
+
+5
+
+↓
+
+Store
+C++
+unordered_map
+
+unordered_set
+Operations
+Insert O(1)
+
+Search O(1)
+
+Delete O(1)
+
+Questions
+
+Two Sum
+Majority Element
+Group Anagrams
+Top K Frequent
+4. Recursion
+Function calling itself.
+fun(5)
+
+↓
+
+fun(4)
+
+↓
+
+fun(3)
+
+↓
+
+fun(2)
+
+↓
+
+fun(1)
+Need
+Base Case
+
+Recursive Call
+
+Return
+
+Time
+
+Usually O(2ⁿ)
+
+Questions
+
+Factorial
+
+Fibonacci
+
+Tower of Hanoi
+
+Subsets
+
+5. Backtracking
+Backtracking means
+Try → Explore → Undo
+Example
+Choose A
+
+↓
+
+Choose B
+
+↓
+
+Wrong?
+
+↓
+
+Undo B
+
+↓
+
+Choose C
+Applications
+N Queens
+Sudoku
+Rat in Maze
+Permutations
+Combination Sum
+6. Linked List
+Memory is NOT continuous.
+10 -> 20 -> 30 -> 40 -> NULL
+Each node contains
+Data
+
+Next Pointer
+Operations
+Insert Beginning O(1)
+
+Delete O(1)
+
+Search O(n)
+
+Topics
+
+Reverse List
+Detect Cycle
+Merge Lists
+Remove Nth Node
+7. Stack
+LIFO
+Last In First Out
+
+Push 10
+
+Push 20
+
+Push 30
+
+Pop
+
+30 removed
+Operations
+Push O(1)
+
+Pop O(1)
+
+Top O(1)
+
+Applications
+
+Expression Evaluation
+
+Undo
+
+DFS
+
+Parentheses
+
+8. Queue
+FIFO
+First In First Out
+
+10
+
+20
+
+30
+
+Remove
+
+10
+Types
+Queue
+
+Circular Queue
+
+Deque
+
+Priority Queue
+
+Applications
+
+BFS
+
+CPU Scheduling
+
+Printer Queue
+
+9. Trees
+Hierarchical structure.
+      1
+
+    /   \
+
+   2     3
+
+  / \
+
+ 4   5
+Traversals
+Preorder
+
+Inorder
+
+Postorder
+
+Level Order
+
+Questions
+
+Diameter
+
+Maximum Depth
+
+Balanced Tree
+
+LCA
+
+10. BST
+Special Tree
+Left < Root < Right
+      10
+
+     /  \
+
+    5    15
+
+   /      \
+
+  3       20
+Search
+Average O(log n)
+
+Worst O(n)
+
+Questions
+
+Insert
+
+Delete
+
+Validate BST
+
+Kth Smallest
+
+11. Heap
+Complete Binary Tree
+Max Heap
+
+50
+
+/ \
+
+40 30
+
+/ \
+
+20 10
+Min Heap
+Smallest on Top
+
+Operations
+
+Insert
+
+Delete
+
+Heapify
+
+Complexity
+
+O(log n)
+
+Applications
+
+Priority Queue
+
+K Largest
+
+Median
+
+Dijkstra
+
+12. Graph (30%)
+Most Important Topic.
+Graph
+
+A ----- B
+
+|       |
+
+|       |
+
+C ----- D
+Representations
+Adjacency Matrix
+
+Adjacency List
+
+Algorithms
+
+DFS
+
+BFS
+
+Topological Sort
+
+Dijkstra
+
+Bellman Ford
+
+Floyd Warshall
+
+Prim
+
+Kruskal
+
+Tarjan
+
+Kosaraju
+
+Questions
+
+Shortest Path
+
+Cycle Detection
+
+Connected Components
+
+Bipartite
+
+Bridges
+
+Articulation Points
+
+13. Greedy
+Always take the best choice NOW.
+Example
+
+Coin Change
+
+Activity Selection
+
+Questions
+
+Jump Game
+
+Gas Station
+
+Merge Intervals
+
+Scheduling
+
+14. Dynamic Programming (20%)
+Most Difficult Topic.
+DP means
+
+Store Previous Answers.
+
+fib(5)
+
+↓
+
+fib(4)
+
+↓
+
+fib(3)
+
+Store
+
+Reuse
+Approaches
+Memoization
+
+Tabulation
+
+Space Optimization
+
+Patterns
+
+0/1 Knapsack
+
+LIS
+
+LCS
+
+Matrix Chain
+
+Digit DP
+
+Tree DP
+
+Bitmask DP
+
+Questions
+
+House Robber
+
+Coin Change
+
+Unique Paths
+
+Edit Distance
+
+15. Trie
+Stores Strings.
+Root
+
+|
+
+a
+
+|
+
+p
+
+|
+
+p
+
+|
+
+l
+
+|
+
+e
+Operations
+Insert
+
+Search
+
+StartsWith
+
+Applications
+
+Dictionary
+
+Autocomplete
+
+Word Search
+
+Maximum XOR
+
+Complexity
+
+O(length)
+
+16. Segment Tree
+Advanced Data Structure.
+Supports
+
+Range Query
+
++
+
+Point Update
+Array
+
+↓
+
+Tree
+
+↓
+
+Answer Fast
+Complexity
+Build O(n)
+
+Query O(log n)
+
+Update O(log n)
+
+Applications
+
+Range Sum
+
+Range Maximum
+
+Lazy Propagation
+
+17. Union Find (Disjoint Set)
+Keeps track of connected components.
+Initially
+
+1
+
+2
+
+3
+
+4
+Union
+1---2
+
+3---4
+Find
+Is 1 connected to 2?
+
+YES
+Optimizations
+Path Compression
+
+Union by Rank
+
+Complexity
+
+Almost O(1)
+
+Applications
+
+Kruskal
+
+Cycle Detection
+
+Connected Components
+
+Order You Should Learn
+Arrays
+Strings
+Hashing
+Recursion
+Backtracking
+Linked List
+Stack
+Queue
+Trees
+BST
+Heap
+Graph
+Greedy
+Dynamic Programming
+Trie
+Segment Tree
+Union Find
+For Competitive Programming (Your Goal)
+Allocate your study time approximately as follows:
+Arrays + Strings (20%): Build a strong foundation. Master sliding window, two pointers, prefix sums, binary search, sorting, and string algorithms.
+Hashing + Stack + Queue + Linked List (20%): Focus on data organization, lookup optimization, monotonic stacks, deques, and pointer manipulation.
+Trees + BST + Heap + Graph (30%): Spend the largest portion here. Become comfortable with DFS, BFS, shortest paths, spanning trees, tree DP basics, and graph traversal patterns.
+Dynamic Programming + Greedy + Backtracking (20%): Learn common DP patterns, greedy proof intuition, recursion trees, and search with pruning.
+Trie + Segment Tree + Union Find (10%): These are advanced topics that appear regularly in contests and some interviews, especially in harder problems.
+My recommendation for you
+Based on your previous questions and your goal of excelling in competitive programming, I'd teach these topics as a complete course rather than isolated explanations.
+For each topic, we'd cover:
+
+Theory from scratch
+Internal working with diagrams
+STL implementation in C++
+Time and space complexity
+Brute-force approach
+Better approach
+Optimal approach
+Pattern recognition (how to identify the topic in a problem)
+Common interview and contest questions
+20–30 handpicked LeetCode problems (Easy → Medium → Hard)
+Contest tricks and optimizations
+Cheat sheet and revision notes
+Real interview questions
+Competitive programming tips
+That way, you'll build both a strong conceptual foundation and the problem-solving skills needed for contests and high-paying software engineering roles.
+Theory from scratch
+Internal working with diagrams
+STL implementation in C++
+Time and space complexity
+Brute-force approach
+Better approach
+Optimal approach
+Pattern recognition (how to identify the topic in a problem)
+Common interview and contest questions
+20–30 handpicked LeetCode problems (Easy → Medium → Hard)
+Contest tricks and optimizations
+Cheat sheet and revision notes
+Real interview questions
+Competitive programming tips
+Yes bro. That's exactly how I would teach you if the goal is Competitive Programming + 20+ LPA Software Engineer.
+This won't be just a DSA explanation—it will be a complete course from beginner to advanced.
+
+Course Structure (Every Topic)
+For every topic (Arrays, Graphs, DP, etc.), we'll follow the same structure.
+1. Theory from Scratch
+We'll start from absolute basics.
+Example (Arrays)
+
+What is an array?
+Why was it invented?
+How is it stored in memory?
+Why is random access O(1)?
+Advantages
+Disadvantages
+Real-life examples
+By the end, you'll understand why arrays work, not just how to use them.
+2. Internal Working (with diagrams)
+We'll understand what happens inside the computer.
+Example
+
+Memory
+
+Address
+
+1000
+1004
+1008
+1012
+1016
+Array
+
+10
+20
+30
+40
+50
+We'll cover:
+Memory layout
+Cache friendliness
+Pointer arithmetic
+How vectors grow internally
+CPU cache effects
+Dynamic memory allocation
+3. STL Implementation in C++
+You'll learn the correct STL for each topic.
+Example (Array)
+
+vector<int> a;
+array<int,5> b;
+deque<int> d;
+We'll discuss:
+When to use vector
+When to use array
+When to use deque
+Which is faster
+Hidden costs
+Common mistakes
+4. Time and Space Complexity
+For every operation.
+Example
+
+Operation	Complexity
+Access	O(1)
+Search	O(n)
+Insert End	O(1) Amortized
+Insert Middle	O(n)
+Delete	O(n)
+We'll also discuss:
+Best Case
+Worst Case
+Average Case
+Amortized Analysis
+5. Brute Force Approach
+Before jumping to the optimal solution, we'll first build the simplest solution.
+Example
+
+Find Maximum Subarray
+
+Brute Force
+
+Try every subarray
+
+Calculate sum
+
+Keep maximum
+Complexity
+O(n²)
+
+or
+
+O(n³)
+You'll learn how to think, not just memorize.
+6. Better Approach
+We'll optimize the brute-force solution step by step.
+Example
+
+Use Prefix Sum
+
+O(n²)
+Then explain why it's better.
+7. Optimal Approach
+Finally, we'll derive the best solution.
+Example
+
+Kadane Algorithm
+
+O(n)
+We'll prove:
+Why it works
+Why it never misses the answer
+Edge cases
+Interview explanation
+8. Pattern Recognition
+This is one of the most important skills.
+You'll learn how to identify the right topic from a problem statement.
+
+For example:
+
+Problem says:
+
+Largest subarray...
+➡️ Prefix Sum / Sliding Window
+Problem says:
+Shortest path...
+➡️ Graph
+Problem says:
+Maximum Profit...
+➡️ DP or Greedy
+Problem says:
+Every possibility...
+➡️ Backtracking
+Problem says:
+Connected Components...
+➡️ Union Find / DFS
+Problem says:
+Range Query...
+➡️ Segment Tree / Fenwick Tree
+This skill is what separates strong competitive programmers.
+
+9. Common Interview and Contest Questions
+Every topic includes the most frequently asked questions.
+Example (Arrays)
+
+Two Sum
+Rotate Array
+Product Except Self
+Merge Intervals
+Maximum Subarray
+Missing Number
+Dutch National Flag
+Trapping Rain Water
+We'll solve each one from scratch.
+10. 20–30 Handpicked LeetCode Problems
+Each topic has a curated progression:
+Easy
+Build confidence
+Learn basic patterns
+Medium
+Learn optimization
+Combine techniques
+Hard
+Contest-level thinking
+Advanced optimizations
+We'll solve them in order, not randomly.
+11. Contest Tricks and Optimizations
+These are the techniques experienced competitive programmers rely on.
+Examples:
+
+Fast I/O
+Bit manipulation
+Coordinate compression
+Prefix XOR
+Difference arrays
+Monotonic stack
+Monotonic queue
+Binary search on answer
+Meet in the middle
+State compression
+Lazy propagation
+Euler Tour
+Heavy-Light Decomposition (introduction)
+Offline queries
+Mo's Algorithm (overview)
+These often turn a Time Limit Exceeded (TLE) solution into an Accepted one.
+12. Cheat Sheet and Revision Notes
+At the end of each topic, you'll get a concise summary.
+Example (Stack)
+
+Operations
+
+Push — O(1)
+Pop — O(1)
+Top — O(1)
+Applications
+Parentheses matching
+Next Greater Element
+Expression evaluation
+DFS
+Undo operations
+Common STL
+stack<int> st;
+Perfect for quick revision before contests or interviews.
+13. Real Interview Questions
+We'll practice questions commonly asked by companies such as:
+Google
+Amazon
+Microsoft
+Meta
+Apple
+Adobe
+Atlassian
+Uber
+LinkedIn
+For each question, we'll discuss:
+Interview expectations
+Common follow-up questions
+Alternative approaches
+How to explain your solution clearly
+14. Competitive Programming Tips
+You'll learn practical habits that improve contest performance:
+Read all problems before coding.
+Identify the pattern before choosing a data structure.
+Start with brute force, then optimize.
+Think about constraints first.
+Test edge cases before submitting.
+Use STL wisely instead of reinventing common structures.
+Learn to recognize recurring patterns across problems.
+Upsolve every contest after it ends.
+Maintain a notebook of mistakes and new techniques.
+Practice consistently rather than solving many problems in one day.
+Bonus Modules
+Along with the core topics, we'll also cover:
+Bit Manipulation
+Binary Search (including binary search on answer)
+Prefix Sum & Difference Arrays
+Sliding Window
+Two Pointers
+Monotonic Stack & Queue
+Fenwick Tree (Binary Indexed Tree)
+Sparse Table
+Topological Sort
+Strongly Connected Components
+Lowest Common Ancestor (LCA)
+Euler Tour
+Matrix Exponentiation
+Number Theory (GCD, LCM, Modular Arithmetic, Sieve, Fast Exponentiation)
+String Algorithms (KMP, Z Algorithm, Rabin–Karp, Manacher's Algorithm)
+Geometry Basics
+Game Theory Basics
+Final Goal
+By the end of this course, you'll be able to:
+✅ Solve LeetCode Easy → Hard confidently.
+✅ Perform well in LeetCode Weekly Contests and Codeforces contests.
+✅ Recognize problem patterns quickly and choose the right algorithm.
+✅ Write clean, optimized C++ solutions using STL effectively.
+✅ Handle coding interviews at top product companies.
+✅ Build the algorithmic thinking needed for competitive programming and high-paying software engineering roles
